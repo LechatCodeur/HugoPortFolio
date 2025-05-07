@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Contact</h1>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-dark text-light">
+                        <h4 class="mb-0 text-white">Mes coordonnées</h4> 
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="fas fa-user me-2"></i><strong>Nom :</strong> Hugo Sanchez-Durante
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-map-marker-alt me-2"></i><strong>Adresse :</strong> 15bis Rue Fontenille, Roanne
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-phone-alt me-2"></i><strong>Téléphone :</strong> +33 06 77 64 23 74
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-envelope me-2"></i><strong>Email :</strong> <a href="mailto:hsanchezdurante@gmail.com" class="contact-link">hsanchezdurante@gmail.com</a>
+                            </li>
+                            <li class="mb-3">
+                                <i class="fab fa-linkedin me-2"></i><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/hugo-sanchez-durante-660739352/" target="_blank" rel="noopener noreferrer" class="contact-link">Mon profil LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-dark text-light">
+                        <h4 class="mb-0 text-white">Envoyez-moi un message</h4> 
+                    </div>
+                    <div class="card-body">
+                        <p>Si vous avez une question ou souhaitez discuter de mes projets, n'hésitez pas à m'envoyer un email en cliquant sur le bouton ci-dessous :</p>
+                        <a href="mailto:hsanchezdurante@gmail.com" class="btn btn-dark btn-lg w-100">
+                            <i class="fas fa-paper-plane me-2"></i>Envoyer un email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-dark text-light">
+                        <h4 class="mb-0 text-white">Téléchargez mon CV</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Vous pouvez télécharger mon CV en cliquant sur le bouton ci-dessous :</p>
+                        <a href="{{ asset('SanchezDurante_Hugo_CV.docx') }}" class="btn btn-primary btn-lg w-100" download>
+                            <i class="fas fa-download me-2"></i>Mon CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .contact-link {
+            color: inherit; 
+            font-weight: bold;  
+            text-decoration: none;  
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;  
+        }
+    </style>
+{% endblock %}

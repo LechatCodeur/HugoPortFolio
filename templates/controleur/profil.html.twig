@@ -1,0 +1,210 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}profil{% endblock %}
+
+{% block body %}
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Mon Profil</h1>
+
+        <!-- Section Présentation -->
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-dark text-light">
+                        <h4 class="mb-0 text-white">Présentation</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Bonjour, je suis Hugo Sanchez-Durante. Passionné par les technologies, je m'intéresse aux réseaux et aux télécommunications, 
+                            avec un intérêt particulier pour l’administration des systèmes et la cybersécurité. 
+                            Mon parcours m’a permis d’acquérir des compétences solides dans la gestion des réseaux, ainsi qu’en électricité et en programmation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Formations -->
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-dark text-light">
+                        <h4 class="mb-0 text-white">Mes Formations</h4>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="text-center mb-3">Mon parcours académique</h5>
+
+                        <div class="timeline">
+                            <div class="timeline-item" data-title="Baccalauréat technologique STI2D" style="background-color: #007bff;">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Septembre 2021 – Août 2024</span>
+                                    <span class="timeline-label">Baccalauréat technologique STI2D<br>Lycée Galilée, Vienne (38)</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item" data-title="Bachelor universitaire de technologie réseaux et télécommunication" style="background-color: #28a745;">
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Septembre 2024 – Août 2027</span>
+                                    <span class="timeline-label">Bachelor universitaire de technologie réseaux et télécommunication<br>Université Jean Monnet, Roanne (42)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Loisirs -->
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-dark text-light">
+                        <h4 class="mb-0 text-white">Loisirs</h4>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="text-center mb-3">Mes passions et loisirs</h5>
+                        <p>
+                            Dans mon temps libre, je m'intéresse à plusieurs activités, comme les jeux vidéo, la lecture fantastique et la cybersécurité, notamment avec RootMe
+                        </p>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="card shadow-sm" style="background-color: #f0f0f0;">
+                                    <div class="card-header" style="background-color: #007bff; color: white;">
+                                        <h5 class="mb-0">Jeux vidéo</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>
+                                            J'aime jouer à des jeux vidéo, notamment Starcraft 2, un RTS qui me permet de développer ma réflexion stratégique. J'aime aussi Lostark, un jeu où la collaboration à 10 joueurs ou plus est obligatoire pour accomplir les quêtes.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <div class="card shadow-sm" style="background-color: #f0f0f0;">
+                                    <div class="card-header" style="background-color: #28a745; color: white;">
+                                        <h5 class="mb-0">Lecture Fantastique</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>
+                                            La lecture fantastique fait partie de mes centres d'intérêt. J'aime m'évader dans des univers imaginaires et découvrir des aventures épiques. Des sagas comme Les Chevaliers d'Émeraude, Harry Potter et Le Seigneur des Anneaux 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <div class="card shadow-sm" style="background-color: #f0f0f0;">
+                                    <div class="card-header" style="background-color: #dc3545; color: white;">
+                                        <h5 class="mb-0">RootMe</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>
+                                            RootMe est une plateforme que j'utilise pour apprendre la cybersécurité. J'y fais des challenges et des exercices pour développer mes compétences
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        .card-header {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .card-body p {
+            color: #555;
+        }
+
+        .card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .row .col-md-4 {
+            margin-bottom: 15px;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+            position: relative;
+        }
+
+        .timeline-item {
+            background-color: #007bff;
+            border-radius: 8px;
+            padding: 10px 20px;
+            margin: 0;
+            position: relative;
+            transition: all 0.3s ease;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            flex: 1;
+            margin-right: 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            height: 120px;
+        }
+
+        .timeline-item:nth-child(1) {
+            background-color: #007bff;
+        }
+
+        .timeline-item:nth-child(2) {
+            background-color: #28a745;
+        }
+
+        .timeline-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            color: white;
+        }
+
+        .timeline-label {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .timeline-date {
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .timeline-item::after {
+            content: attr(data-title);
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: none;
+            white-space: nowrap;
+            z-index: 10;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .timeline-item:hover::after {
+            display: block;
+        }
+
+       
+    </style>
+{% endblock %}

@@ -1,17 +1,165 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mon application Symfony{% endblock %}</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/zephyr/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            position: relative;
+            overflow: visible; 
+        }
+        .flag-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none; 
+            z-index: -1; 
+        }
+        .flag {
+            position: absolute;
+            width: 60px;
+            height: 40px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg');
+            background-size: cover;
+        }
+
+        .content-wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        footer {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-wrapper">
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ path('accueil') }}">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('profil') }}">Profil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('portfolio') }}">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('choix_parcours') }}">Choix Parcours</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('contact') }}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main-content container mt-4">
+            {% block body %}{% endblock %}
+        </div>
+
+        <footer class="bg-dark text-light text-center py-3 mt-4">
+            <p>SanchezDurante_Hugo_2025_Copyright</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-cu1w5z9t8E9mB1Isr7BBt6jodfskEKwzMkp0ZIk1Z8TZvzy1wU3TxGp7mc0T0PUh" crossorigin="anonymous"></script>
+
+    
+    <script>
+        const numFlags = 18;  
+        const flagContainer = document.createElement('div');
+        flagContainer.classList.add('flag-container');
+        document.body.appendChild(flagContainer);
+
+        // Classe Flag pour chaque drapeau
+        class Flag {
+            constructor() {
+                this.flag = document.createElement('div');
+                this.flag.classList.add('flag');
+                
+                // Image du drapeau
+                this.flag.style.backgroundImage = 'url("https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg")';
+                
+                // Calculer les positions initiales de manière à éviter les bords
+                this.x = Math.random() * (window.innerWidth - 60); // Largeur du drapeau = 60px
+                this.y = Math.random() * (window.innerHeight - 40); // Hauteur du drapeau = 40px
+                
+                // Définir la vitesse initiale du drapeau
+                this.vx = (Math.random() * 2 + 1) * (Math.random() > 0.5 ? 1 : -1); // Vitesse aléatoire en x
+                this.vy = (Math.random() * 2 + 1) * (Math.random() > 0.5 ? 1 : -1); // Vitesse aléatoire en y
+                
+                this.width = 60;
+                this.height = 40;
+                
+                // Appliquer la position initiale au drapeau
+                this.flag.style.left = `${this.x}px`;
+                this.flag.style.top = `${this.y}px`;
+                
+                // Ajouter le drapeau à la page
+                flagContainer.appendChild(this.flag);
+            }
+
+            move() {
+                // Obtenons la taille totale du document (même lorsqu'on fait défiler)
+                const docWidth = document.documentElement.scrollWidth;
+                const docHeight = document.documentElement.scrollHeight;
+
+                // Mettre à jour la position du drapeau avec sa vitesse
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Vérifier si le drapeau touche un bord et inverser la direction
+                if (this.x <= 0 || this.x >= docWidth - this.width) {
+                    this.vx = -this.vx; // Inverser la direction horizontale
+                }
+
+                if (this.y <= 0 || this.y >= docHeight - this.height) {
+                    this.vy = -this.vy; // Inverser la direction verticale
+                }
+
+                // Mettre à jour la position du drapeau
+                this.flag.style.left = `${this.x}px`;
+                this.flag.style.top = `${this.y}px`;
+            }
+        }
+
+        // Création de plusieurs drapeaux
+        const flags = [];
+        for (let i = 0; i < numFlags; i++) {
+            flags.push(new Flag());
+        }
+
+        // Animation des drapeaux
+        function animateFlags() {
+            flags.forEach(flag => flag.move());
+            requestAnimationFrame(animateFlags); // Appel récursif pour la prochaine frame
+        }
+
+        animateFlags(); // Lancer l'animation
+    </script>
+
+</body>
 </html>

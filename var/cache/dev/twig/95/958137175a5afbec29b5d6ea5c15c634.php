@@ -1,0 +1,468 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\CoreExtension;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+use Twig\TemplateWrapper;
+
+/* controleur/choix_parcours.html.twig */
+class __TwigTemplate_e4c860f29ee6e4fbce09a1ea459cf5e3 extends Template
+{
+    private Source $source;
+    /**
+     * @var array<string, Template>
+     */
+    private array $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'body' => [$this, 'block_body'],
+        ];
+    }
+
+    protected function doGetParent(array $context): bool|string|Template|TemplateWrapper
+    {
+        // line 1
+        return "base.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "controleur/choix_parcours.html.twig"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "controleur/choix_parcours.html.twig"));
+
+        $this->parent = $this->loadTemplate("base.html.twig", "controleur/choix_parcours.html.twig", 1);
+        yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+    }
+
+    // line 3
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_title(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        yield "Choix de Parcours";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 5
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_body(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        // line 6
+        yield "    <div class=\"container py-5\">
+        <div class=\"row justify-content-center\">
+            <!-- Première carte : Cybersécurité -->
+            <div class=\"col-md-10 mb-4\"> 
+                <div class=\"card shadow-sm\">
+                    <div class=\"card-header bg-primary text-white\">
+                        <h2>Cybersécurité</h2>
+                    </div>
+                    <div class=\"card-body\">
+                        <p>J'ai choisi de postuler au parcours cybersécurité car j'ai vraiment envie d'apprendre à mettre en place et sécuriser des infrastructures et des services. Ce sujet m'a toujours passionné depuis que je suis petit. J'ai toujours aimé bien comprendre comment un jeu vidéo ou des plugins/mods fonctionnent et voir si il n'y pas de faille </p>
+                        <ul>
+                            <li><strong>AC CyberA</strong> Mettre en œuvre les outils fondamentaux de sécurisation d’une infrastructure du réseau.</li>
+                            <li><strong>AC CyberA</strong> Connaître les différents types d’attaque.</li>
+                            <li><strong>AC CyberA</strong> Sécuriser les services</li>
+                            <li><strong>AC CyberB</strong> Prendre en main des outils de test de pénétration réseau/système</li>
+                            <li><strong>AC CyberB</strong>  Gérer une crise suite à un incident de sécurité</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=\"row\">
+            <!-- Deuxième ligne : Points forts et Points à améliorer -->
+            <div class=\"col-md-6 mb-4\">
+                <div class=\"card shadow-sm\">
+                    <div class=\"card-header bg-success text-white\">
+                        <h4 class=\"mb-0\">Points forts</h4>
+                    </div>
+                    <div class=\"card-body\">
+                        <div class=\"row\">
+                            <!-- Carte 1  : Base de données -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-success shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Base de données</h5>
+                                        <p class=\"card-text\">Compréhension des concepts de base de données relationnelles et de l'outils Windows Access.</p>
+                                        <ul>
+                                            <li><strong>AC en lien :</strong> AC11.04 : Maîtriser les rôles et les principes fondamentaux des systèmes d’exploitation pour la configuration et l’administration des réseaux et services fournis.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carte 2 : Switch / Routeur et un peu de Firewall -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-success shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Base des réseaux</h5>
+                                        <p class=\"card-text\">Compétences en gestion de switchs, routeurs et une compréhension des principes de base des firewalls (Windows).</p>
+                                        <ul>
+                                            <li><strong>AC en lien :</strong> AC11.03 : Configurer les fonctions de base du réseau local.</li>
+                                            <li><strong>AC en lien :</strong> AC11.05 : Identifier les dysfonctionnements du réseau local.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carte 3 : Autodidacte -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-success shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Autodidacte</h5>
+                                        <p class=\"card-text\">Apprentissage pratique et autodidacte du hacking grâce à la plateforme RootMe.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carte 4  : Base des services -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-success shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Base des services</h5>
+                                        <p class=\"card-text\">Compétences de base dans la gestion et la configuration de services réseau tels que DHCP, DNS, et les serveurs web.</p>
+                                        <ul>
+                                            <li><strong>AC en lien :</strong> AC12.03 : Déployer des supports de transmission.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte Points à améliorer -->
+            <div class=\"col-md-6 mb-4\">
+                <div class=\"card shadow-sm\">
+                    <div class=\"card-header bg-warning text-white\">
+                        <h4 class=\"mb-0\">Points à améliorer</h4>
+                    </div>
+                    <div class=\"card-body\">
+                        <div class=\"row\">
+                            <!-- Carte 1 : NAT/PAT -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-danger shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">NAT/PAT</h5>
+                                        <p class=\"card-text\">Améliorer la compréhension du NAT (Network Address Translation) et du PAT (Port Address Translation).</p>
+                                  
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carte 2 : Cryptographie -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-danger shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Cryptographie</h5>
+                                        <p class=\"card-text\">Approfondir les connaissances sur les techniques de chiffrement et de déchiffrement des données.</p>
+                                        <ul>
+                                            <li><strong>Ac en lien : </strong>AC CyberA :Choisir les outils cryptographiques adaptés au besoin fonctionnel du système d’information.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carte 3 : Veille technologique -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-danger shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Veille technologique</h5>
+                                        <p class=\"card-text\">Faire une veille régulière sur les nouvelles technologies du secteur.</p>
+                                        <ul>
+                                            <li><strong>AC en lien :</strong> AC13.06 : S’intégrer dans un environnement propice au développement et au travail collaboratif.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carte 4: Mathématique -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-danger shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Mathématique</h5>
+                                        <p class=\"card-text\">Renforcer la compréhension des concepts mathématiques appliqués à la cybersécurité et aux algorithmes de chiffrement.</p>
+                                        <ul>
+                                            <li><strong>AC en lien :</strong> AC12.02 : Caractériser des systèmes de transmissions élémentaires et leur modélisation mathématique.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--carte : Comment s'améliorer -->
+        <div class=\"row justify-content-center\">
+            <div class=\"col-md-10 mb-4\"> 
+                <div class=\"card shadow-sm\">
+                    <div class=\"card-header bg-info text-white\">
+                        <h4 class=\"mb-0\">Comment s'améliorer</h4>
+                    </div>
+                    <div class=\"card-body\">
+                        <p>Voici des recommandations concrètes pour améliorer les points identifiés ci-dessus :</p>
+                        <ul>
+                            <li><strong>NAT/PAT :</strong> Revoir les cours de R2.01 et refaire les TD en lien pour renforcer la compréhension du NAT et du PAT.</li>
+                            <li><strong>Cryptographie</strong> Suivre les cours RT2 Cyber</li>
+                            <li><strong>Veille technologique :</strong> S'informer sur Reddit, suivre les nouvelles technologies en matière de sécurité sur des plateformes comme GitHub ou LinkedIn.</li>
+                            <li><strong>Mathématiques :</strong> Revoir les cours de R1.14 / R1.13 ,ainsi qu'apprendre en autodidacte en consultant les programmes de prépa et terminal général.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getTemplateName(): string
+    {
+        return "controleur/choix_parcours.html.twig";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function isTraitable(): bool
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDebugInfo(): array
+    {
+        return array (  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+    }
+
+    public function getSourceContext(): Source
+    {
+        return new Source("{% extends 'base.html.twig' %}
+
+{% block title %}Choix de Parcours{% endblock %}
+
+{% block body %}
+    <div class=\"container py-5\">
+        <div class=\"row justify-content-center\">
+            <!-- Première carte : Cybersécurité -->
+            <div class=\"col-md-10 mb-4\"> 
+                <div class=\"card shadow-sm\">
+                    <div class=\"card-header bg-primary text-white\">
+                        <h2>Cybersécurité</h2>
+                    </div>
+                    <div class=\"card-body\">
+                        <p>J'ai choisi de postuler au parcours cybersécurité car j'ai vraiment envie d'apprendre à mettre en place et sécuriser des infrastructures et des services. Ce sujet m'a toujours passionné depuis que je suis petit. J'ai toujours aimé bien comprendre comment un jeu vidéo ou des plugins/mods fonctionnent et voir si il n'y pas de faille </p>
+                        <ul>
+                            <li><strong>AC CyberA</strong> Mettre en œuvre les outils fondamentaux de sécurisation d’une infrastructure du réseau.</li>
+                            <li><strong>AC CyberA</strong> Connaître les différents types d’attaque.</li>
+                            <li><strong>AC CyberA</strong> Sécuriser les services</li>
+                            <li><strong>AC CyberB</strong> Prendre en main des outils de test de pénétration réseau/système</li>
+                            <li><strong>AC CyberB</strong>  Gérer une crise suite à un incident de sécurité</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=\"row\">
+            <!-- Deuxième ligne : Points forts et Points à améliorer -->
+            <div class=\"col-md-6 mb-4\">
+                <div class=\"card shadow-sm\">
+                    <div class=\"card-header bg-success text-white\">
+                        <h4 class=\"mb-0\">Points forts</h4>
+                    </div>
+                    <div class=\"card-body\">
+                        <div class=\"row\">
+                            <!-- Carte 1  : Base de données -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-success shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Base de données</h5>
+                                        <p class=\"card-text\">Compréhension des concepts de base de données relationnelles et de l'outils Windows Access.</p>
+                                        <ul>
+                                            <li><strong>AC en lien :</strong> AC11.04 : Maîtriser les rôles et les principes fondamentaux des systèmes d’exploitation pour la configuration et l’administration des réseaux et services fournis.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carte 2 : Switch / Routeur et un peu de Firewall -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-success shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Base des réseaux</h5>
+                                        <p class=\"card-text\">Compétences en gestion de switchs, routeurs et une compréhension des principes de base des firewalls (Windows).</p>
+                                        <ul>
+                                            <li><strong>AC en lien :</strong> AC11.03 : Configurer les fonctions de base du réseau local.</li>
+                                            <li><strong>AC en lien :</strong> AC11.05 : Identifier les dysfonctionnements du réseau local.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carte 3 : Autodidacte -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-success shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Autodidacte</h5>
+                                        <p class=\"card-text\">Apprentissage pratique et autodidacte du hacking grâce à la plateforme RootMe.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carte 4  : Base des services -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-success shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Base des services</h5>
+                                        <p class=\"card-text\">Compétences de base dans la gestion et la configuration de services réseau tels que DHCP, DNS, et les serveurs web.</p>
+                                        <ul>
+                                            <li><strong>AC en lien :</strong> AC12.03 : Déployer des supports de transmission.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte Points à améliorer -->
+            <div class=\"col-md-6 mb-4\">
+                <div class=\"card shadow-sm\">
+                    <div class=\"card-header bg-warning text-white\">
+                        <h4 class=\"mb-0\">Points à améliorer</h4>
+                    </div>
+                    <div class=\"card-body\">
+                        <div class=\"row\">
+                            <!-- Carte 1 : NAT/PAT -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-danger shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">NAT/PAT</h5>
+                                        <p class=\"card-text\">Améliorer la compréhension du NAT (Network Address Translation) et du PAT (Port Address Translation).</p>
+                                  
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carte 2 : Cryptographie -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-danger shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Cryptographie</h5>
+                                        <p class=\"card-text\">Approfondir les connaissances sur les techniques de chiffrement et de déchiffrement des données.</p>
+                                        <ul>
+                                            <li><strong>Ac en lien : </strong>AC CyberA :Choisir les outils cryptographiques adaptés au besoin fonctionnel du système d’information.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carte 3 : Veille technologique -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-danger shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Veille technologique</h5>
+                                        <p class=\"card-text\">Faire une veille régulière sur les nouvelles technologies du secteur.</p>
+                                        <ul>
+                                            <li><strong>AC en lien :</strong> AC13.06 : S’intégrer dans un environnement propice au développement et au travail collaboratif.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carte 4: Mathématique -->
+                            <div class=\"col-md-6 mb-3\">
+                                <div class=\"card border-danger shadow-sm\">
+                                    <div class=\"card-body\">
+                                        <h5 class=\"card-title\">Mathématique</h5>
+                                        <p class=\"card-text\">Renforcer la compréhension des concepts mathématiques appliqués à la cybersécurité et aux algorithmes de chiffrement.</p>
+                                        <ul>
+                                            <li><strong>AC en lien :</strong> AC12.02 : Caractériser des systèmes de transmissions élémentaires et leur modélisation mathématique.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--carte : Comment s'améliorer -->
+        <div class=\"row justify-content-center\">
+            <div class=\"col-md-10 mb-4\"> 
+                <div class=\"card shadow-sm\">
+                    <div class=\"card-header bg-info text-white\">
+                        <h4 class=\"mb-0\">Comment s'améliorer</h4>
+                    </div>
+                    <div class=\"card-body\">
+                        <p>Voici des recommandations concrètes pour améliorer les points identifiés ci-dessus :</p>
+                        <ul>
+                            <li><strong>NAT/PAT :</strong> Revoir les cours de R2.01 et refaire les TD en lien pour renforcer la compréhension du NAT et du PAT.</li>
+                            <li><strong>Cryptographie</strong> Suivre les cours RT2 Cyber</li>
+                            <li><strong>Veille technologique :</strong> S'informer sur Reddit, suivre les nouvelles technologies en matière de sécurité sur des plateformes comme GitHub ou LinkedIn.</li>
+                            <li><strong>Mathématiques :</strong> Revoir les cours de R1.14 / R1.13 ,ainsi qu'apprendre en autodidacte en consultant les programmes de prépa et terminal général.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+", "controleur/choix_parcours.html.twig", "C:\\Users\\Utilisateur\\Desktop\\Cours\\RT1 S2 2024_2025\\Projet\\SAE.PORTFOLIO\\HugoPortFolio\\templates\\controleur\\choix_parcours.html.twig");
+    }
+}
